@@ -1,0 +1,14 @@
+- Run Installer.exe for Wins or ./Installer for Mac/Linux to setup the environment.
+- Then run the app.exe or ./app to start the application.
+- If you love CLI, ./ also work with .exe (Just to let you know).
+- You can do all of those manually if you know what you are doing, if not, just run them.
+
+- Code to set up npm for next.js 
+npx create-next-app@latest frontend_next --yes
+cd frontend_next
+npm run dev
+
+- Code to set up django for backend
+source .venv/bin/activate.ps1
+django-admin startproject backend_dj
+cd backend_dj

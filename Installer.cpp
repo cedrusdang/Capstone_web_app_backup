@@ -15,7 +15,7 @@ int sh(const std::string& cmd) {
         std::cerr << "Command failed: " << cmd << " (rc=" << rc << ")\n";
         std::cerr << "Press Enter to exit...";
         std::cin.get();
-        std::exit(1); // kết thúc toàn chương trình
+        std::exit(1); 
     }
     return rc;
 }
@@ -41,14 +41,14 @@ int main(){
 
     #ifdef _WIN32
         // Install venv requirements (Windows)
-        if (sh("cd backend && py -m venv .venv && .\\.venv\\Scripts\\python.exe -m pip install -r requirements.txt") != 0) return 1;
+        if (sh("py -m venv .venv && .\\.venv\\Scripts\\python.exe -m pip install -r requirements.txt") != 0) return 1;
         // Install npm dependencies (Windows)
-        if (sh("cd frontend && if exist package-lock.json (npm ci) else (npm install)") != 0) return 1;
+        if (sh("if exist package-lock.json (npm ci) else (npm install)") != 0) return 1;
     #else
         // Install venv requirements (Linux/Mac)
-        if (sh("cd backend && python3 -m venv .venv && ./.venv/bin/python -m pip install -r requirements.txt") != 0) return 1;
+        if (sh("python3 -m venv .venv && ./.venv/bin/python -m pip install -r requirements.txt") != 0) return 1;
         // Install npm dependencies (Linux/Mac)
-        if (sh("cd frontend && [ -f package-lock.json ] && npm ci || npm install") != 0) return 1;
+        if (sh("[ -f package-lock.json ] && npm ci || npm install") != 0) return 1;
     #endif
 
     cout << "Installation is completed." << endl
