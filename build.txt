@@ -1,0 +1,17 @@
+# Windows build code (MinGW/MSYS)
+g++ -std=c++20 App.cpp -o App.exe
+g++ -std=c++20 Installer.cpp -o Installer.exe
+
+# Windows build code (Visual Studio)
+cl /std:c++20 App.cpp /Fe:App.exe
+cl /std:c++20 Installer.cpp /Fe:Installer.exe
+
+# Linux build code
+g++ -std=c++20 App.cpp -o App
+g++ -std=c++20 Installer.cpp -o Installer
+chmod +x App
+chmod +x Installer
+
+# MacOS build code
+clang++ -std=c++20 App.cpp -o App
+clang++ -std=c++20 Installer.cpp -o Installer
