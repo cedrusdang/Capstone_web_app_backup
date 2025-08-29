@@ -20,17 +20,17 @@ int main() {
 
     // Frontend
     std::thread frontend([] {
-        system("cd frontend && npm run dev -- -p 4747");
+        system("cd frontend && npm run dev -- -p 3000");
     });
 
     // Wait for server to start then open browser
     std::this_thread::sleep_for(std::chrono::seconds(5));
 #ifdef _WIN32
-    system("start http://localhost:4747");
+    system("start http://localhost:3000");
 #elif __APPLE__
-    system("open http://localhost:4747");
+    system("open http://localhost:3000");
 #else
-    system("xdg-open http://localhost:4747");
+    system("xdg-open http://localhost:3000");
 #endif
     std::cout << "Servers running. Use your UI/servers to stop.\n";
 

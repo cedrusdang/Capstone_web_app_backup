@@ -4,11 +4,25 @@
 - You can do all of those manually if you know what you are doing, if not, just run them.
 
 - Code to set up npm for next.js 
-npx create-next-app@latest frontend_next --yes
-cd frontend_next
+
+# Linux
+npx create-next-app@latest frontend --y
+cd frontend
+npm run dev
+
+# Wins
+npx create-next-app@latest frontend --yes
+cd frontend
 npm run dev
 
 - Code to set up django for backend
-source .venv/bin/activate.ps1
-django-admin startproject backend_dj
-cd backend_dj
+
+# Linux
+.venv/bin/activate
+django-admin startproject backend
+cd backend
+
+# Wins
+.venv/Scripts/activate.ps1
+django-admin startproject backend
+cd backend
