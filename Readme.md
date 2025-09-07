@@ -1,14 +1,25 @@
-Install the local - Dev version application using:
+# You will need npm and python installed on your machine
+# Please run these commands in terminal to set up the project
 
-- Installer.exe for Windows
-- Installer for Linux
 
-Then, run the application using:
+# Linux
+npx create-next-app@latest frontend --y
+cd frontend
+npm run dev
 
-- App.exe for Windows
-- App for Linux
+# Wins
+npx create-next-app@latest frontend --yes
+cd frontend
+npm run dev
 
-Compiling with g++ is in the build.txt
-Currently, the current pre-build only supports Windows and Linux.
+- Code to set up django for backend
 
-This is not User version - You must have Python and Node.js installed.
+# Linux
+.venv/bin/activate
+django-admin startproject backend
+cd backend
+
+# Wins
+.venv/Scripts/activate.ps1
+django-admin startproject backend
+cd backend
